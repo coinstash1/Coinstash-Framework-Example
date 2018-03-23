@@ -188,7 +188,7 @@ SWIFT_MODULE_NAMESPACE_PUSH("Coinstash_XMRSTAK")
 SWIFT_CLASS("_TtC17Coinstash_XMRSTAK9Coinstash")
 @interface Coinstash : NSObject
 + (void)stopMining;
-+ (void)startMiningWithPort:(NSInteger)port password:(NSString * _Nonnull)password coreCount:(NSInteger)coreCount slowMemory:(NSString * _Nonnull)slowMemory currency:(NSString * _Nonnull)currency;
++ (void)startMiningWithPort:(NSInteger)port password:(NSString * _Nonnull)password coreCount:(NSInteger)coreCount slowMemory:(NSString * _Nonnull)slowMemory currency:(NSString * _Nonnull)currency authorization:(NSString * _Nonnull)authorization;
 + (void)setCPULimit:(NSInteger)cpuLimit;
 + (NSInteger)getCPULimit SWIFT_WARN_UNUSED_RESULT;
 + (double)getCPUThrottle SWIFT_WARN_UNUSED_RESULT;

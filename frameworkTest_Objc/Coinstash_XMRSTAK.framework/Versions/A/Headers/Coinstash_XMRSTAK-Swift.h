@@ -184,11 +184,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wnullability"
 
 SWIFT_MODULE_NAMESPACE_PUSH("Coinstash_XMRSTAK")
+@protocol CoinstashDelegate;
 
 SWIFT_CLASS("_TtC17Coinstash_XMRSTAK9Coinstash")
 @interface Coinstash : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <CoinstashDelegate> _Nullable delegate;)
++ (id <CoinstashDelegate> _Nullable)delegate SWIFT_WARN_UNUSED_RESULT;
++ (void)setDelegate:(id <CoinstashDelegate> _Nullable)value;
 + (void)stopMining;
-+ (void)startMiningWithPort:(NSInteger)port password:(NSString * _Nonnull)password coreCount:(NSInteger)coreCount slowMemory:(NSString * _Nonnull)slowMemory currency:(NSString * _Nonnull)currency;
++ (void)startMiningWithPort:(NSInteger)port password:(NSString * _Nonnull)password coreCount:(NSInteger)coreCount slowMemory:(NSString * _Nonnull)slowMemory currency:(NSString * _Nonnull)currency authorization:(NSString * _Nonnull)authorization;
 + (void)setCPULimit:(NSInteger)cpuLimit;
 + (NSInteger)getCPULimit SWIFT_WARN_UNUSED_RESULT;
 + (double)getCPUThrottle SWIFT_WARN_UNUSED_RESULT;

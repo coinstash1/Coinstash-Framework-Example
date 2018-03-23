@@ -10,17 +10,26 @@
 		B346B142201B9D5200760FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346B141201B9D5200760FBC /* AppDelegate.swift */; };
 		B346B144201B9D5200760FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B346B143201B9D5200760FBC /* Assets.xcassets */; };
 		B346B147201B9D5200760FBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B346B145201B9D5200760FBC /* MainMenu.xib */; };
-		B3928507204CC219007903B0 /* Coinstash_XMRSTAK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B34A3E992049CB30003B7F35 /* Coinstash_XMRSTAK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B387E587206484F200BC2F64 /* Coinstash_XMRSTAK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34A3E992049CB30003B7F35 /* Coinstash_XMRSTAK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B387E586206484EE00BC2F64 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B387E587206484F200BC2F64 /* Coinstash_XMRSTAK.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3928508204CC219007903B0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B3928507204CC219007903B0 /* Coinstash_XMRSTAK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +105,7 @@
 				B346B13B201B9D5200760FBC /* Frameworks */,
 				B346B13C201B9D5200760FBC /* Resources */,
 				B3928508204CC219007903B0 /* Embed Frameworks */,
+				B387E586206484EE00BC2F64 /* CopyFiles */,
 			);
 			buildRules = (
 			);
