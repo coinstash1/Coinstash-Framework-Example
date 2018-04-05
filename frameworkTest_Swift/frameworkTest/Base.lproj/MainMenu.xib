@@ -74,16 +74,16 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="282" height="225"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1152"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1129"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="282" height="225"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMy-px-Fjg">
-                        <rect key="frame" x="78" y="63" width="127" height="100"/>
+                        <rect key="frame" x="88" y="63" width="107" height="100"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-pj-U7Z">
-                                <rect key="frame" x="-6" y="72" width="139" height="32"/>
+                                <rect key="frame" x="-6" y="72" width="119" height="32"/>
                                 <buttonCell key="cell" type="push" title="Start Mining" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="e6g-ta-IVL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system" size="14"/>
@@ -93,7 +93,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LsP-qD-lyP">
-                                <rect key="frame" x="-6" y="43" width="139" height="32"/>
+                                <rect key="frame" x="-6" y="43" width="119" height="32"/>
                                 <buttonCell key="cell" type="push" title="Stop Mining" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="C8o-9s-KUz">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gaZ-MV-RGl">
-                                <rect key="frame" x="-2" y="25" width="131" height="17"/>
+                                <rect key="frame" x="-2" y="25" width="111" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="dUm-Ou-Wg7">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -111,7 +111,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x3h-qQ-if1">
-                                <rect key="frame" x="-2" y="0.0" width="131" height="17"/>
+                                <rect key="frame" x="-2" y="0.0" width="111" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="TyC-04-QEr">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

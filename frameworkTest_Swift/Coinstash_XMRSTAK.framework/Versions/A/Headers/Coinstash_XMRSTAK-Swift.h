@@ -200,6 +200,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <CoinstashDelegate>
 + (NSInteger)getCores SWIFT_WARN_UNUSED_RESULT;
 + (NSInteger)preferenceCores SWIFT_WARN_UNUSED_RESULT;
 + (void)setPreferenceCores:(NSInteger)cores;
++ (void)setParentProcessId:(NSInteger)pId;
 + (BOOL)currentMinerStatus SWIFT_WARN_UNUSED_RESULT;
 + (double)getHashRate SWIFT_WARN_UNUSED_RESULT;
 + (NSInteger)getAccepted SWIFT_WARN_UNUSED_RESULT;
