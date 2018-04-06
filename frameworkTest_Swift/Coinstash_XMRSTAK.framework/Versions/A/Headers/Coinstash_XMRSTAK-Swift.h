@@ -206,6 +206,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <CoinstashDelegate>
 + (NSInteger)getAccepted SWIFT_WARN_UNUSED_RESULT;
 + (NSInteger)getTotal SWIFT_WARN_UNUSED_RESULT;
 + (void)showCoinstashAccount;
++ (void)showPaymentConfirm;
++ (void)showAbout;
++ (void)showIntroView;
++ (void)showFAQ;
++ (void)showChooseCurrency;
 + (void)showPreferenceController;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
