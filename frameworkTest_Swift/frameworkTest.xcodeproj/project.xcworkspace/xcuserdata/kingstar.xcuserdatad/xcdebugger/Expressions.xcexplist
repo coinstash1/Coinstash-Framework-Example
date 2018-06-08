@@ -6,6 +6,9 @@
          contextName = "AppDelegate.onStart(_:):AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
+               value = "String(data: request.httpBody)">
+            </PersistentString>
+            <PersistentString
                value = "request.httpBody">
             </PersistentString>
          </PersistentStrings>
@@ -13,6 +16,9 @@
       <ContextState
          contextName = "closure #1 in AppDelegate.onStart(_:):AppDelegate.swift">
          <PersistentStrings>
+            <PersistentString
+               value = "httpResponse.status">
+            </PersistentString>
             <PersistentString
                value = "(json[&quot;error&quot;] as! [String: [String]])[&quot;message&quot;][0]">
             </PersistentString>

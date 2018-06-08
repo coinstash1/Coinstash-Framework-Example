@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B32FF805208476C400CBC8A4 /* configure.json in Resources */ = {isa = PBXBuildFile; fileRef = B32FF804208476C400CBC8A4 /* configure.json */; };
 		B346B142201B9D5200760FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346B141201B9D5200760FBC /* AppDelegate.swift */; };
 		B346B144201B9D5200760FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B346B143201B9D5200760FBC /* Assets.xcassets */; };
 		B346B147201B9D5200760FBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B346B145201B9D5200760FBC /* MainMenu.xib */; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B32FF804208476C400CBC8A4 /* configure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configure.json; sourceTree = SOURCE_ROOT; };
 		B346B13E201B9D5200760FBC /* frameworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frameworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B346B141201B9D5200760FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B346B143201B9D5200760FBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				B346B141201B9D5200760FBC /* AppDelegate.swift */,
+				B32FF804208476C400CBC8A4 /* configure.json */,
 				B346B143201B9D5200760FBC /* Assets.xcassets */,
 				B346B145201B9D5200760FBC /* MainMenu.xib */,
 				B346B148201B9D5200760FBC /* Info.plist */,
@@ -128,7 +131,7 @@
 				TargetAttributes = {
 					B346B13D201B9D5200760FBC = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -162,6 +165,7 @@
 			files = (
 				B346B144201B9D5200760FBC /* Assets.xcassets in Resources */,
 				B346B147201B9D5200760FBC /* MainMenu.xib in Resources */,
+				B32FF805208476C400CBC8A4 /* configure.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +305,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = frameworkTest/frameworkTest.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 246U226PV7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -313,8 +318,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beachio.frameworkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c2bb1523-a343-488f-ad82-fc0cc1798b85";
-				PROVISIONING_PROFILE_SPECIFIER = test;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -324,8 +329,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = frameworkTest/frameworkTest.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 246U226PV7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -337,8 +342,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beachio.frameworkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "74e96085-9141-4d52-b7d0-5bb10b5c6d9b";
-				PROVISIONING_PROFILE_SPECIFIER = tested;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
