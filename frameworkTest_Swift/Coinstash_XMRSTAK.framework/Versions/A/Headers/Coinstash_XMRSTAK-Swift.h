@@ -191,7 +191,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <CoinstashDelegate>
 + (void)setDelegate:(id <CoinstashDelegate> _Nullable)value;
 + (void)configure:(NSString * _Nonnull)fileName;
 + (void)stopMining;
-+ (void)startMiningWithPort:(NSInteger)port password:(NSString * _Nonnull)password coreCount:(NSInteger)coreCount slowMemory:(NSString * _Nonnull)slowMemory currency:(NSString * _Nonnull)currency authorization:(NSString * _Nonnull)authorization;
++ (void)startMiningWithPort:(NSInteger)port password:(NSString * _Nonnull)password coreCount:(NSInteger)coreCount slowMemory:(NSString * _Nonnull)slowMemory currency:(NSString * _Nonnull)currency authorization:(NSString * _Nonnull)authorization gpu:(NSString * _Nonnull)gpu;
++ (void)setApplicationInfoWithUid:(NSString * _Nonnull)uid secret:(NSString * _Nonnull)secret;
 + (void)isTokenVaildWithCompletion:(void (^ _Nonnull)(BOOL))completion;
 + (void)setCPULimit:(NSInteger)cpuLimit;
 + (NSInteger)getCPULimit SWIFT_WARN_UNUSED_RESULT;

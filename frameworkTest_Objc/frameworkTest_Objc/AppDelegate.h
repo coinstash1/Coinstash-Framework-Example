@@ -11,8 +11,8 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, CoinstashDelegate> {
     NSTimer *timer;
-}
 
+}
 
 @end
 
