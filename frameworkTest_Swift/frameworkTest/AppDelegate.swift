@@ -40,14 +40,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, CoinstashDelegate {
         /*-----------------Start Mining-------------------*/
         //  Coinstash.configure("configure")
         //  Coinstash.showIntroView()
-        Coinstash.setApplicationInfo(uid: uid,
-                                     secret: secret)
+        Coinstash.setApplicationInfo(uid: UID,
+                                     secret: SECRET)
         Coinstash.startMining(port: 3333,
                               password: "x",
                               coreCount: 4,
                               slowMemory: "warn",
                               currency: "monero7",
-                              authorization: authCode,
+                              authorization: AUTHCODE,
                               gpu: "detect"
         )
         
