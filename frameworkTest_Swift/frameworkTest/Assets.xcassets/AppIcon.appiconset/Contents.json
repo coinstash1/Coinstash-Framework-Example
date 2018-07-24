@@ -3,61 +3,61 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-26.png",
+      "filename" : "icon_16x16.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-27.png",
+      "filename" : "icon_16x16@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-28.png",
+      "filename" : "icon_32x32.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-29.png",
+      "filename" : "icon_32x32@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-30.png",
+      "filename" : "icon_128x128.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-31.png",
+      "filename" : "icon_128x128@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-32.png",
+      "filename" : "icon_256x256.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-33.png",
+      "filename" : "icon_256x256@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-34.png",
+      "filename" : "icon_512x512.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "alternote-2015-05-35.png",
+      "filename" : "icon_512x512@2x.png",
       "scale" : "2x"
     }
   ],

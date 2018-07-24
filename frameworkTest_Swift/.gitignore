@@ -33,6 +33,9 @@ xcuserdata/
 timeline.xctimeline
 playground.xcworkspace
 
+## Credentials
+Credentials.swift
+AppDelegate.swift
 
 
 # CocoaPods

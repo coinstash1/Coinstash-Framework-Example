@@ -12,6 +12,7 @@
 		B346B144201B9D5200760FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B346B143201B9D5200760FBC /* Assets.xcassets */; };
 		B346B147201B9D5200760FBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B346B145201B9D5200760FBC /* MainMenu.xib */; };
 		B387E587206484F200BC2F64 /* Coinstash_XMRSTAK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34A3E992049CB30003B7F35 /* Coinstash_XMRSTAK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3A3522121074214001BB340 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A3522021074214001BB340 /* Credentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		B346B148201B9D5200760FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B346B149201B9D5200760FBC /* frameworkTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = frameworkTest.entitlements; sourceTree = "<group>"; };
 		B34A3E992049CB30003B7F35 /* Coinstash_XMRSTAK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Coinstash_XMRSTAK.framework; sourceTree = "<group>"; };
+		B3A3522021074214001BB340 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				B346B141201B9D5200760FBC /* AppDelegate.swift */,
+				B3A3522021074214001BB340 /* Credentials.swift */,
 				B32FF804208476C400CBC8A4 /* configure.json */,
 				B346B143201B9D5200760FBC /* Assets.xcassets */,
 				B346B145201B9D5200760FBC /* MainMenu.xib */,
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A3522121074214001BB340 /* Credentials.swift in Sources */,
 				B346B142201B9D5200760FBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
