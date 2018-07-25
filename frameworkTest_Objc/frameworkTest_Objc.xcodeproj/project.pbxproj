@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B32137992109252D00F6DD3D /* Coinstash_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32137982109252D00F6DD3D /* Coinstash_Mac.framework */; };
+		B321379A2109252D00F6DD3D /* Coinstash_Mac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32137982109252D00F6DD3D /* Coinstash_Mac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3AD1D742023458C0095129D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AD1D732023458C0095129D /* AppDelegate.m */; };
 		B3AD1D762023458C0095129D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3AD1D752023458C0095129D /* Assets.xcassets */; };
 		B3AD1D792023458C0095129D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3AD1D772023458C0095129D /* MainMenu.xib */; };
 		B3AD1D7C2023458C0095129D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AD1D7B2023458C0095129D /* main.m */; };
-		B3AD1D86202345C50095129D /* Coinstash_XMRSTAK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3AD1D83202345BF0095129D /* Coinstash_XMRSTAK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B3AD1D8C20234E7B0095129D /* Coinstash_XMRSTAK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AD1D83202345BF0095129D /* Coinstash_XMRSTAK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,7 +22,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B3AD1D86202345C50095129D /* Coinstash_XMRSTAK.framework in Embed Frameworks */,
+				B321379A2109252D00F6DD3D /* Coinstash_Mac.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B32137982109252D00F6DD3D /* Coinstash_Mac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Coinstash_Mac.framework; sourceTree = "<group>"; };
 		B3A3522221074BF0001BB340 /* Credentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Credentials.h; sourceTree = "<group>"; };
 		B3AD1D6F2023458C0095129D /* frameworkTest_Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frameworkTest_Objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AD1D722023458C0095129D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		B3AD1D7A2023458C0095129D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3AD1D7B2023458C0095129D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3AD1D7D2023458C0095129D /* frameworkTest_Objc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = frameworkTest_Objc.entitlements; sourceTree = "<group>"; };
-		B3AD1D83202345BF0095129D /* Coinstash_XMRSTAK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Coinstash_XMRSTAK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3AD1D8C20234E7B0095129D /* Coinstash_XMRSTAK.framework in Frameworks */,
+				B32137992109252D00F6DD3D /* Coinstash_Mac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +57,7 @@
 		B3AD1D662023458C0095129D = {
 			isa = PBXGroup;
 			children = (
-				B3AD1D83202345BF0095129D /* Coinstash_XMRSTAK.framework */,
+				B32137982109252D00F6DD3D /* Coinstash_Mac.framework */,
 				B3AD1D712023458C0095129D /* frameworkTest_Objc */,
 				B3AD1D702023458C0095129D /* Products */,
 				B3AD1D8B20234E7B0095129D /* Frameworks */,

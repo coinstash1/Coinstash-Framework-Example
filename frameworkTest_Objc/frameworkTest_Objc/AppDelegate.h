@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Coinstash_XMRSTAK/Coinstash_XMRSTAK-Swift.h>
+#import <Coinstash_Mac/Coinstash_Mac.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, CoinstashDelegate> {
     NSTimer *timer;

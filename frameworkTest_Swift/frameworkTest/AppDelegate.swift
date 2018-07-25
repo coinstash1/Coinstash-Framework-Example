@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Coinstash_XMRSTAK
+import Coinstash_Mac
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CoinstashDelegate {
@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CoinstashDelegate {
     
     @IBAction func onStart(_ sender: Any) {
         /*-----------------Set CPU Limit-------------------*/
-        Coinstash.setCPULimit(100)
+        Coinstash.setCPULimit(30)
         /*-----------------Start Mining-------------------*/
         //  Coinstash.configure("configure")
         //  Coinstash.showIntroView()

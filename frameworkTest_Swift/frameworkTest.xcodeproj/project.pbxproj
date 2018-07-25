@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B321379621091F0200F6DD3D /* Coinstash_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B321379421091ECF00F6DD3D /* Coinstash_Mac.framework */; };
+		B321379721091F0200F6DD3D /* Coinstash_Mac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B321379421091ECF00F6DD3D /* Coinstash_Mac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B32FF805208476C400CBC8A4 /* configure.json in Resources */ = {isa = PBXBuildFile; fileRef = B32FF804208476C400CBC8A4 /* configure.json */; };
 		B346B142201B9D5200760FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346B141201B9D5200760FBC /* AppDelegate.swift */; };
 		B346B144201B9D5200760FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B346B143201B9D5200760FBC /* Assets.xcassets */; };
 		B346B147201B9D5200760FBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B346B145201B9D5200760FBC /* MainMenu.xib */; };
-		B387E587206484F200BC2F64 /* Coinstash_XMRSTAK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34A3E992049CB30003B7F35 /* Coinstash_XMRSTAK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3A3522121074214001BB340 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A3522021074214001BB340 /* Credentials.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B387E587206484F200BC2F64 /* Coinstash_XMRSTAK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +32,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B321379721091F0200F6DD3D /* Coinstash_Mac.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B321379421091ECF00F6DD3D /* Coinstash_Mac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Coinstash_Mac.framework; sourceTree = "<group>"; };
 		B32FF804208476C400CBC8A4 /* configure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configure.json; sourceTree = SOURCE_ROOT; };
 		B346B13E201B9D5200760FBC /* frameworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frameworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B346B141201B9D5200760FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +48,6 @@
 		B346B146201B9D5200760FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B346B148201B9D5200760FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B346B149201B9D5200760FBC /* frameworkTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = frameworkTest.entitlements; sourceTree = "<group>"; };
-		B34A3E992049CB30003B7F35 /* Coinstash_XMRSTAK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Coinstash_XMRSTAK.framework; sourceTree = "<group>"; };
 		B3A3522021074214001BB340 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B321379621091F0200F6DD3D /* Coinstash_Mac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +66,7 @@
 		B346B135201B9D5200760FBC = {
 			isa = PBXGroup;
 			children = (
-				B34A3E992049CB30003B7F35 /* Coinstash_XMRSTAK.framework */,
+				B321379421091ECF00F6DD3D /* Coinstash_Mac.framework */,
 				B346B140201B9D5200760FBC /* frameworkTest */,
 				B346B13F201B9D5200760FBC /* Products */,
 				B3928504204CC1FD007903B0 /* Frameworks */,
