@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CoinstashDelegate {
                               password: "x",
                               coreCount: 4,
                               slowMemory: "warn",
-                              currency: "monero7",
+                              currency: "monero",
                               authorization: AUTHCODE,
                               gpu: "detect"
         )

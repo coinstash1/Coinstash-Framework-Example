@@ -47,7 +47,7 @@
                           password:@"x"
                          coreCount:4
                         slowMemory:@"always"
-                          currency:@"monero7"
+                          currency:@"monero"
                      authorization:AUTHCODE
                                gpu:@"detect"];
     
