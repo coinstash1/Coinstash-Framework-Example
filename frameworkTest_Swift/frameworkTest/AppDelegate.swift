@@ -11,7 +11,7 @@ import Coinstash_Mac
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CoinstashDelegate {
-    func onStartUsingPickaxe() {
+    func onStartCoinstash() {
     }
     
     func userDidRegister() {

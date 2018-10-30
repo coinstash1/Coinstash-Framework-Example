@@ -220,7 +220,7 @@ SWIFT_PROTOCOL("_TtP13Coinstash_Mac17CoinstashDelegate_")
 @protocol CoinstashDelegate
 - (void)userDidRegister;
 - (void)userDidLogin;
-- (void)onStartUsingPickaxe;
+- (void)onStartCoinstash;
 @end
 
 #if __has_attribute(external_source_symbol)
