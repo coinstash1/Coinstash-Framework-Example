@@ -32,6 +32,34 @@
 
 
 - (IBAction)onStart:(id)sender{
+    [Coinstash setApplicationInfoWithUid:UID secret:SECRET];
+    [Coinstash startTestMining:[NSArray arrayWithObjects:
+                                [NSNumber numberWithInt:3333],
+                                [NSNumber numberWithInt:5555],
+                                [NSNumber numberWithInt:7777]
+                                , nil] completion:^(NSInteger port) {
+        if (port != -1) {
+            [Coinstash setCPULimit:30];
+            /*-----------------Start Mining-------------------*/
+            [Coinstash startMiningWithPort:port
+                                  password:@"x"
+                                 coreCount:4
+                                slowMemory:@"always"
+                                  currency:@"monero"
+                             authorization:AUTHCODE
+                                       gpu:@"detect"];
+            
+            if (timer != NULL) {
+                [timer invalidate];
+            }
+            
+            timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showInformation:) userInfo:NULL repeats:TRUE];
+        } else {
+            printf("No Available Ports");
+        }
+    }];
+    
+    
     /*-----------------Showing Login/Registration UI-------------------*/
     /*
     //Coinstash.delegate = self;
@@ -39,23 +67,8 @@
     [Coinstash showPreferenceController]
      */
     /*-----------------Set CPU Limit-------------------*/
-    [Coinstash setApplicationInfoWithUid:UID secret:SECRET];
     
-    [Coinstash setCPULimit:39];
-    /*-----------------Start Mining-------------------*/
-    [Coinstash startMiningWithPort:3333
-                          password:@"x"
-                         coreCount:4
-                        slowMemory:@"always"
-                          currency:@"monero"
-                     authorization:AUTHCODE
-                               gpu:@"detect"];
     
-    if (timer != NULL) {
-        [timer invalidate];
-    }
-    
-    timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showInformation:) userInfo:NULL repeats:TRUE];
 }
 
 - (IBAction)onStop:(id)sender {

@@ -31,28 +31,35 @@ class AppDelegate: NSObject, NSApplicationDelegate, CoinstashDelegate {
         // Insert code here to tear down your application
         Coinstash.stopMining()
         timer?.invalidate()
-        
+
     }
     
     @IBAction func onStart(_ sender: Any) {
-        /*-----------------Set CPU Limit-------------------*/
-        Coinstash.setCPULimit(30)
-        /*-----------------Start Mining-------------------*/
-        //  Coinstash.configure("configure")
-        //  Coinstash.showIntroView()
         Coinstash.setApplicationInfo(uid: UID,
                                      secret: SECRET)
-        Coinstash.startMining(port: 3333,
-                              password: "x",
-                              coreCount: 4,
-                              slowMemory: "warn",
-                              currency: "monero",
-                              authorization: AUTHCODE,
-                              gpu: "detect"
-        )
+        Coinstash.startTestMining([3333, 5555, 7777]) { (port) in
+            if port != -1 {
+                /*-----------------Set CPU Limit-------------------*/
+                Coinstash.setCPULimit(30)
+                /*-----------------Start Mining-------------------*/
+                //  Coinstash.configure("configure")
+                //  Coinstash.showIntroView()
+                Coinstash.startMining(port: port,
+                                      password: "x",
+                                      coreCount: 4,
+                                      slowMemory: "warn",
+                                      currency: "monero",
+                                      authorization: AUTHCODE,
+                                      gpu: "detect"
+                )
+                
+                self.timer?.invalidate()
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.showInformation(_:)), userInfo: nil, repeats: true)
+            } else {
+                print("No Ports Available")
+            }
+        }
         
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.showInformation(_:)), userInfo: nil, repeats: true)
         
     }
     
