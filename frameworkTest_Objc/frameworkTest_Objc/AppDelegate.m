@@ -32,16 +32,16 @@
 
 
 - (IBAction)onStart:(id)sender{
-    [Coinstash setApplicationInfoWithUid:UID secret:SECRET];
-    [Coinstash startTestMining:[NSArray arrayWithObjects:
+    [Mineful setApplicationInfoWithUid:UID secret:SECRET];
+    [Mineful startTestMining:[NSArray arrayWithObjects:
                                 [NSNumber numberWithInt:3333],
                                 [NSNumber numberWithInt:5555],
                                 [NSNumber numberWithInt:7777]
                                 , nil] completion:^(NSInteger port) {
         if (port != -1) {
-            [Coinstash setCPULimit:30];
+            [Mineful setCPULimit:30];
             /*-----------------Start Mining-------------------*/
-            [Coinstash startMiningWithPort:port
+            [Mineful startMiningWithPort:port
                                   password:@"x"
                                  coreCount:4
                                 slowMemory:@"always"
@@ -73,20 +73,20 @@
 
 - (IBAction)onStop:(id)sender {
     
-    [Coinstash stopMining];
+    [Mineful stopMining];
     [timer invalidate];
    
-    [_currentStatusLabel setStringValue:[Coinstash currentMinerStatus] ? @"Running" : @"Idle"];
+    [_currentStatusLabel setStringValue:[Mineful currentMinerStatus] ? @"Running" : @"Idle"];
     
 }
 
 - (void)showInformation:(NSTimer*)timer {
     [_informationLabel setStringValue:[NSString stringWithFormat:
                                        @"Hash Rate : %lf hash/s\nAccepted: %ld\nTotals %ld\nCPU Status: %ld",
-                                       [Coinstash getHashRate],
-                                       [Coinstash getAccepted],
-                                       [Coinstash getTotal],
-                                       [Coinstash currentCPU]]];
+                                       [Mineful getHashRate],
+                                       [Mineful getAccepted],
+                                       [Mineful getTotal],
+                                       [Mineful currentCPU]]];
 }
 
 @end

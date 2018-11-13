@@ -1,0 +1,11 @@
+framework module Mineful_Mac {
+  umbrella header "Mineful_Mac.h"
+
+  export *
+  module * { export * }
+}
+
+module Mineful_Mac.Swift {
+    header "Mineful_Mac-Swift.h"
+    requires objc
+}

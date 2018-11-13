@@ -7,9 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Coinstash_Mac/Coinstash_Mac.h>
+#import <Mineful_Mac/Mineful_Mac.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, CoinstashDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate, MinefulDelegate> {
     NSTimer *timer;
 
 }

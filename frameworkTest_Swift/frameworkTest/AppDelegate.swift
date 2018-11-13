@@ -7,11 +7,12 @@
 //
 
 import Cocoa
-import Coinstash_Mac
+import Mineful_Mac
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, CoinstashDelegate {
-    func onStartCoinstash() {
+class AppDelegate: NSObject, NSApplicationDelegate, MinefulDelegate {
+    func onStartMineful() {
+    
     }
     
     func userDidRegister() {
@@ -29,22 +30,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, CoinstashDelegate {
     
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
-        Coinstash.stopMining()
+        Mineful.stopMining()
         timer?.invalidate()
 
     }
     
     @IBAction func onStart(_ sender: Any) {
-        Coinstash.setApplicationInfo(uid: UID,
+        Mineful.setApplicationInfo(uid: UID,
                                      secret: SECRET)
-        Coinstash.startTestMining([3333, 5555, 7777]) { (port) in
+        Mineful.startTestMining([3333, 5555, 7777]) { (port) in
             if port != -1 {
                 /*-----------------Set CPU Limit-------------------*/
-                Coinstash.setCPULimit(30)
+                Mineful.setCPULimit(30)
                 /*-----------------Start Mining-------------------*/
-                //  Coinstash.configure("configure")
-                //  Coinstash.showIntroView()
-                Coinstash.startMining(port: port,
+                //  Mineful.configure("configure")
+                //  Mineful.showIntroView()
+                Mineful.startMining(port: port,
                                       password: "x",
                                       coreCount: 4,
                                       slowMemory: "warn",
@@ -64,17 +65,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, CoinstashDelegate {
     }
     
     @IBAction func onStop(_ sender: Any) {
-        Coinstash.stopMining()
+        Mineful.stopMining()
         timer?.invalidate()
         
-        currentStatusLabel.stringValue = Coinstash.currentMinerStatus() ? "Running" : "Idle"
+        currentStatusLabel.stringValue = Mineful.currentMinerStatus() ? "Running" : "Idle"
     }
     
     @objc func showInformation(_ timer : Timer) {
-        informationLabel.stringValue = "Hash Rate : \(Coinstash.getHashRate()) hash/s"
-            +  "\nAccepted : \(Coinstash.getAccepted())"
-            +  "\nTotals : \(Coinstash.getTotal())"
-            +  "\nCPU Status: \(Coinstash.currentCPU())%"
+        informationLabel.stringValue = "Hash Rate : \(Mineful.getHashRate()) hash/s"
+            +  "\nAccepted : \(Mineful.getAccepted())"
+            +  "\nTotals : \(Mineful.getTotal())"
+            +  "\nCPU Status: \(Mineful.currentCPU())%"
     }
 }
 
