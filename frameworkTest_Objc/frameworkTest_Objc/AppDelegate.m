@@ -23,6 +23,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    cable = [[MinefulCable alloc] init];
 }
 
 
@@ -32,34 +33,35 @@
 
 
 - (IBAction)onStart:(id)sender{
+//    [Mineful checkAuthWithEmail:@"vasilurda.sun@gmail.com" password:@"test1234" completion:^(NSDictionary<NSString *,id> * response) {
+//        cable.OnMessageEvent = ^(NSError * error, NSDictionary<NSString *,id> * result) {
+//            if (error == NULL) {
+//                NSDictionary<NSString *,NSString *> *identifier = result[@"identifier"];
+//                NSString* type = identifier[@"type"];
+//
+//            }
+//        };
+//        [cable UserChannelSubscribe];
+//    }];
     [Mineful setApplicationInfoWithUid:UID secret:SECRET];
-    [Mineful startTestMining:[NSArray arrayWithObjects:
-                                [NSNumber numberWithInt:3333],
-                                [NSNumber numberWithInt:5555],
-                                [NSNumber numberWithInt:7777]
-                                , nil] completion:^(NSInteger port) {
+    /*-----------------Start Mining-------------------*/
+    [Mineful startPortTestingWithOrders:AUTHCODE completion:^(NSInteger port) {
         if (port != -1) {
+            printf("%d", port);
             [Mineful setCPULimit:30];
-            /*-----------------Start Mining-------------------*/
-            [Mineful startMiningWithPort:port
-                                  password:@"x"
-                                 coreCount:4
-                                slowMemory:@"always"
-                                  currency:@"monero"
-                             authorization:AUTHCODE
-                                       gpu:@"detect"];
-            
+            [Mineful startMiningWithOrdersWithPort:port password:@"x" coreCount:4 slowMemory:@"always" gpu:@"detect" authorization:AUTHCODE];
+        
             if (timer != NULL) {
                 [timer invalidate];
             }
-            
+        
             timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showInformation:) userInfo:NULL repeats:TRUE];
+        
         } else {
             printf("No Available Ports");
         }
     }];
-    
-    
+
     /*-----------------Showing Login/Registration UI-------------------*/
     /*
     //Coinstash.delegate = self;

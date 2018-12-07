@@ -11,7 +11,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, MinefulDelegate> {
     NSTimer *timer;
-
+    MinefulCable *cable;
 }
 
 @end

@@ -17,10 +17,26 @@
          contextName = "closure #1 in AppDelegate.onStart(_:):AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
-               value = "httpResponse.status">
+               value = "(json[&quot;error&quot;] as! [String: [String]])[&quot;message&quot;][0]">
             </PersistentString>
             <PersistentString
-               value = "(json[&quot;error&quot;] as! [String: [String]])[&quot;message&quot;][0]">
+               value = "httpResponse.status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #3 in AppDelegate.onStart(_:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "message?[&quot;identifier&quot;][&quot;channel&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MinefulCable.websocketDidReceiveMessage(socket:text:):MinefulCable.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "message[&quot;identifier&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

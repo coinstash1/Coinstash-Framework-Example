@@ -163,6 +163,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
 #endif
 #if __has_feature(modules)
+@import Foundation;
 @import ObjectiveC;
 #endif
 
@@ -181,6 +182,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSStream;
+
+SWIFT_CLASS("_TtC11Mineful_Mac16FoundationStream")
+@interface FoundationStream : NSObject <NSStreamDelegate>
+/// Delegate for the stream methods. Processes incoming bytes
+- (void)stream:(NSStream * _Nonnull)aStream handleEvent:(NSStreamEvent)eventCode;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @protocol MinefulDelegate;
 @class NSViewController;
 
@@ -191,8 +201,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <MinefulDelegate> _
 + (void)setDelegate:(id <MinefulDelegate> _Nullable)value;
 + (void)configure:(NSString * _Nonnull)fileName;
 + (void)stopMining;
-+ (void)startMiningWithPort:(NSInteger)port password:(NSString * _Nonnull)password coreCount:(NSInteger)coreCount slowMemory:(NSString * _Nonnull)slowMemory currency:(NSString * _Nonnull)currency authorization:(NSString * _Nonnull)authorization gpu:(NSString * _Nonnull)gpu;
-+ (void)startTestMining:(NSArray<NSNumber *> * _Nonnull)ports completion:(void (^ _Nullable)(NSInteger))completion;
++ (void)startMiningWithPort:(NSInteger)port password:(NSString * _Nonnull)password coreCount:(NSInteger)coreCount slowMemory:(NSString * _Nonnull)slowMemory currency:(NSString * _Nonnull)currency gpu:(NSString * _Nonnull)gpu authorization:(NSString * _Nonnull)authorization;
++ (void)startMiningWithOrdersWithPort:(NSInteger)port password:(NSString * _Nonnull)password coreCount:(NSInteger)coreCount slowMemory:(NSString * _Nonnull)slowMemory gpu:(NSString * _Nonnull)gpu authorization:(NSString * _Nonnull)authorization;
++ (void)startPortTesting:(NSArray<NSNumber *> * _Nonnull)ports completion:(void (^ _Nullable)(NSInteger))completion;
++ (void)startPortTestingWithOrders:(NSString * _Nonnull)authorization completion:(void (^ _Nullable)(NSInteger))completion;
 + (void)setApplicationInfoWithUid:(NSString * _Nonnull)uid secret:(NSString * _Nonnull)secret;
 + (void)isTokenVaildWithCompletion:(void (^ _Nonnull)(BOOL))completion;
 + (void)setCPULimit:(NSInteger)cpuLimit;
@@ -213,7 +225,33 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) id <MinefulDelegate> _
 + (void)showIntroView;
 + (BOOL)isAllowAnonymous SWIFT_WARN_UNUSED_RESULT;
 + (void)setAllowAnonymous:(BOOL)allow;
++ (void)sendInvitationWithEmail:(NSString * _Nonnull)email firstname:(NSString * _Nonnull)firstname lastname:(NSString * _Nonnull)lastname groupType:(NSString * _Nonnull)groupType groupId:(NSString * _Nonnull)groupId roleId:(NSString * _Nonnull)roleId completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)getAchievementsWithCompletion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)getAchievementWithId:(NSInteger)id completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)getRewardsWithCompletion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)getRewardTypesWithCompletion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)createTeamWithName:(NSString * _Nonnull)name completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)createRewardWithAchievement_id:(NSInteger)achievement_id reward_type_id:(NSInteger)reward_type_id completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)createDeviceWithCompletion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)getDevicesWithFilter:(NSDictionary<NSString *, id> * _Nullable)filter completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)forgotPasswordWithEmail:(NSString * _Nonnull)email completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)createUserWithUsername:(NSString * _Nonnull)username email:(NSString * _Nonnull)email password:(NSString * _Nonnull)password completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)checkAuthWithEmail:(NSString * _Nonnull)email password:(NSString * _Nonnull)password completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)licenseWithLicense:(NSString * _Nonnull)license completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)updateUserWithWantsCredit:(BOOL)wantsCredit completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)currentUserWithCompletion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))completion;
++ (void)setServerToken:(NSString * _Nonnull)token;
++ (NSString * _Nonnull)getServerToken SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)disableSleepMode:(BOOL)sleepMode SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11Mineful_Mac12MinefulCable")
+@interface MinefulCable : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)UserChannelSubscribe;
+@property (nonatomic, copy) void (^ _Nullable OnMessageEvent)(NSError * _Nullable, NSDictionary<NSString *, id> * _Nullable);
 @end
 
 
@@ -222,6 +260,13 @@ SWIFT_PROTOCOL("_TtP11Mineful_Mac15MinefulDelegate_")
 - (void)userDidRegister;
 - (void)userDidLogin;
 - (void)onStartMineful;
+@end
+
+
+SWIFT_CLASS("_TtC11Mineful_Mac9WebSocket")
+@interface WebSocket : NSObject <NSStreamDelegate>
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 #if __has_attribute(external_source_symbol)
